@@ -56,12 +56,12 @@ export function CartProvider({ children }) {
         }
         });
 
-        toast.success(`${product.title} successfully added!`); // --- NOTIFICACIÓN
+        toast.success(`${product.name} successfully added!`); // --- NOTIFICACIÓN
     };
 
     //QUITAR DEL CARRITO
     const removeFromCart = (id) => {
-        setCart((prev) => prev.filter((item) => item.id !== id)); //QUITA TODOS LOS PRODUCTOS DE ESTE TIPO (MEJORAR PROXIMAMENTE)
+        setCart((prev) => prev.filter((item) => item.id !== id)); //QUITA TODOS LOS PRODUCTOS DE ESTE TIPO (QUITA TODOS!!! MEJORAR PROXIMAMENTE)
     };
 
     //LIMPIAR CARRITO

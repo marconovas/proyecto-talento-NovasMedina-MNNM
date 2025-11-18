@@ -9,8 +9,8 @@ import { useContext } from "react";
 import { ProductsContext } from "../Context/MockApiCOntext";
 
 function Products () {
+    const { cart, addToCart, removeFromCart } = useCart();
     const  { products } = useContext(ProductsContext);
-    const { addToCart, removeFromCart } = useCart();
 
     return(
         <>
@@ -19,7 +19,7 @@ function Products () {
             <Container className="my-5">
                 <Row xs={1} md={3} className="g-4">
                 {products.map((i) => {
-                    const cartItem = products.find((p) => p.id === i.id); //veo si el item ya está en el carrito (info util para botones)
+                    const cartItem = cart.find((p) => p.id === i.id); //veo si el item ya está en el carrito (info util para botones)
 
                     return (
                     <Col key={i.id}>
@@ -27,7 +27,7 @@ function Products () {
                         <Card.Img variant="top" src={i.image} width="300px" height="300px" />
                         <Card.Body className="d-flex flex-column justify-content-between">
                             <div>
-                            <Card.Title>{i.title}</Card.Title>
+                            <Card.Title>{i.name}</Card.Title>
                             <Card.Text>
                                 {i.description}
                                 <br />
