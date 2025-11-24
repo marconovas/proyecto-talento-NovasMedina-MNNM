@@ -24,7 +24,12 @@ function Products () {
                     return (
                     <Col key={i.id}>
                         <Card className="h-100">
-                        <Card.Img variant="top" src={i.image} width="300px" height="300px" />
+                            <Card.Img 
+                                variant="top" 
+                                src={i.image?.trim() || "holder.js/100px180"}
+                                width="300px" 
+                                height="300px" 
+                            />
                         <Card.Body className="d-flex flex-column justify-content-between">
                             <div>
                             <Card.Title>{i.name}</Card.Title>
@@ -82,11 +87,11 @@ function Products () {
                 </Row>
 
                 <ToastContainer
-                position="top-right"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
+                    position="top-right"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop
+                    closeOnClick
                 />
             </Container>
 
