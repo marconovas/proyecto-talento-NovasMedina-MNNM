@@ -1,16 +1,19 @@
 import { Container, Navbar, Nav, Button, Dropdown, Badge } from "react-bootstrap";
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from "../Context/CartProvider";
+import { AuthContext } from "../Context/AuthContext";
+import LogIn from "../Pages/LogIn";
+import { useContext } from "react";
 
 function Header () {
     const { cart } = useCart();
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
+    const { token, LogOut } = useContext(AuthContext);
     const navigate = useNavigate();
-    const auth = localStorage.getItem("auth"); //true o null
 
     const handleLogout = () => {
-        localStorage.removeItem("auth");
+        LogOut();
         navigate("/login");
     }
 
@@ -27,7 +30,7 @@ function Header () {
                 </Nav>
 
                 <div className="d-flex align-items-center">
-                    {!auth ? (
+                    {!token ? (
                         <Button as={Link} to={"/login"} variant="primary" className="m-1">Login</Button>
                     ) : (
                         <div>

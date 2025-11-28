@@ -6,14 +6,17 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 import { CartProvider } from './Context/CartProvider.jsx';
 import { ProductsProvider } from './Context/MockApiContext.jsx';
+import { AuthProvider } from './Context/AuthContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ProductsProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </AuthProvider>
       </ProductsProvider>
     </BrowserRouter>
   </StrictMode>,

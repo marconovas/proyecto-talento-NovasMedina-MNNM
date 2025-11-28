@@ -1,18 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Alert, Button,  Form } from "react-bootstrap";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 
 function LogIn() {
     const [validated, setValidated] = useState(false);
     const [password, setPassword] = useState("");
-    const [user, setUser] = useState("");
     const [error, setError] = useState("");
+    
+    const { Login } = useContext(AuthContext);
     const navigate = useNavigate();
-
+    const [user, setUser] = useState("");
+    
     const handleSubmit = (event) => {
         event.preventDefault(); //evita que la pagina recargue
+
+        const success = Login(user, password);
         
         const form = event.currentTarget;
         setValidated(true); //validacion visual
@@ -22,13 +27,8 @@ function LogIn() {
             return;
         }
         
-        //usuario y pass a validar
-        const correctUser = "admin";
-        const correctPass = "1234";
-        
-        if(user === correctUser && password === correctPass){
+        if(success){
             setError("");
-            localStorage.setItem("auth", true);
             alert("Welcome, Admin!");
             navigate("/admin"); 
         } else {
