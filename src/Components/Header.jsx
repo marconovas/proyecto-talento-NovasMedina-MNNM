@@ -45,7 +45,15 @@ function Header () {
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        <Nav.Link href="#contact">Contact Us</Nav.Link>
+                        <Nav.Link
+                            onClick={() => {
+                                const el = document.getElementById("contact");
+                                if (el) el.scrollIntoView({ behavior: "smooth" });
+                            }}
+                        >
+                            Contact Us
+                        </Nav.Link>
+
 
                         <Dropdown className="m-1">
                             <Dropdown.Toggle variant="success" id="dropdown-basic">

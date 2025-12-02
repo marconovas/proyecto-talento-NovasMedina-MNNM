@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer (){
     return(
-        <footer className="bg-dark text-white py-4 mt-0">
+        <footer id="contact" className="bg-dark text-white py-4 mt-0">
             <Container>
                 <Row>
                     {/* CONTACT INFO */}
@@ -22,7 +22,7 @@ function Footer (){
                     </Col>
 
                     {/* SOCIAL MEDIA */}
-                    <Col id="contact" md={4}>
+                    <Col md={4}>
                         <h5>Follow Us</h5>
                         <p>
                             <a href="#" className="text-white me-2">Facebook</a>
