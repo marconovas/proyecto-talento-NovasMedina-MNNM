@@ -1,6 +1,6 @@
 import { Row, Col, Card, Button, Container, CardImgOverlay } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useCart } from '../Context/CartProvider';
+import { useCart } from '../Context/CartProvider.jsx';
 
 function Sections () {
 

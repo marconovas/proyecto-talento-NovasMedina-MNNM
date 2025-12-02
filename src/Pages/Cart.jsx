@@ -1,8 +1,8 @@
 import { Button, Container } from "react-bootstrap";
-import { useCart } from "../Context/CartProvider"; 
-import Table from "react-bootstrap/Table";
-import  Header  from "../Components/Header"
-import Footer from "../Components/Footer";
+import { useCart } from "../Context/CartProvider.jsx"; 
+import Table from "react-bootstrap/Table.jsx";
+import  Header  from "../Components/Header.jsx"
+import Footer from "../Components/Footer.jsx";
 
 function Cart() {
     const { cart, removeFromCart, clearCart } = useCart();

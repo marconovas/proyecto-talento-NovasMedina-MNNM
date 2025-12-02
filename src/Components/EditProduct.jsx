@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ProductsContext } from "../Context/MockApiContext";
+import { ProductsContext } from "../Context/MockApiContext.jsx";
 import { Container, Form, Button, Card } from "react-bootstrap";
 
 function EditProduct() {

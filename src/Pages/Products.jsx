@@ -1,12 +1,12 @@
 import { Col, Container, Row, Card, Button, Alert } from "react-bootstrap";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "../Components/Header.jsx";
+import Footer from "../Components/Footer.jsx";
 import { Link } from "react-router-dom";
-import { useCart } from "../Context/CartProvider";
+import { useCart } from "../Context/CartProvider.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useEffect, useState } from "react";
-import { ProductsContext } from "../Context/MockApiCOntext";
+import { ProductsContext } from "../Context/MockApiContext.jsx";
 
 function Products () {
     const { cart, addToCart, removeFromCart } = useCart();

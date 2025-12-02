@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Button, Form, Container, Card } from "react-bootstrap";
-import { ProductsContext } from "../Context/MockApiContext";
+import { ProductsContext } from "../Context/MockApiContext.jsx";
 import { useNavigate } from "react-router-dom";
 
 function AddProduct() {

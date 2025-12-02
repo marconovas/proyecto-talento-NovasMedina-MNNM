@@ -1,7 +1,7 @@
 import { Button, Container, Row, Col,  Card, Carousel, Placeholder } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "../Components/Header.jsx";
+import Footer from "../Components/Footer.jsx";
 
 function About (){
     return(

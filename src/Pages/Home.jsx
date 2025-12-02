@@ -1,11 +1,11 @@
-import Header from "../Components/Header"
-import Hero from "../Components/Hero"
-import Sections from "../Components/Sections";
-import Featured from "../Components/Featured";
-import Benefits from "../Components/Benefits";
-import NewsLetter from "../Components/NewsLetter";
+import Header from "../Components/Header.jsx"
+import Hero from "../Components/Hero.jsx"
+import Sections from "../Components/Sections.jsx";
+import Featured from "../Components/Featured.jsx";
+import Benefits from "../Components/Benefits.jsx";
+import NewsLetter from "../Components/NewsLetter.jsx";
 import Footer from "../Components/Footer";
-import { useCart } from "../Context/CartProvider";
+import { useCart } from "../Context/CartProvider.jsx";
 
 function Home() {
     const { products } = useCart();

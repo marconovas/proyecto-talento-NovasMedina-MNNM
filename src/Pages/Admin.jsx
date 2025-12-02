@@ -1,7 +1,7 @@
 import { Container, Table, Button } from "react-bootstrap";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import { ProductsContext } from "../Context/MockApiCOntext";
+import Footer from "../Components/Footer.jsx";
+import Header from "../Components/Header.jsx";
+import { ProductsContext } from "../Context/MockApiContext.jsx";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 

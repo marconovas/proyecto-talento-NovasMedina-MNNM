@@ -1,7 +1,7 @@
 import { Container, Navbar, Nav, Button, Dropdown, Badge } from "react-bootstrap";
 import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from "../Context/CartProvider";
-import { AuthContext } from "../Context/AuthContext";
+import { useCart } from "../Context/CartProvider.jsx";
+import { AuthContext } from "../Context/AuthContext.jsx";
 import { useContext } from "react";
 
 function Header () {

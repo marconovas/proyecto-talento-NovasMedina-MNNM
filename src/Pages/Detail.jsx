@@ -1,10 +1,10 @@
 import { Col, Row, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Header from "../Components/Header";
+import Header from "../Components/Header.jsx";
 import { useParams } from "react-router-dom";
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer.jsx";
 import { useContext } from "react";
-import { ProductsContext } from "../Context/MockApiCOntext";
+import { ProductsContext } from "../Context/MockApiContext.jsx";
 
 function Detail (){
     const { products } = useContext(ProductsContext);

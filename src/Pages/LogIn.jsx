@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Alert, Button,  Form } from "react-bootstrap";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import Footer from "../Components/Footer.jsx";
+import Header from "../Components/Header.jsx";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../Context/AuthContext";
+import { AuthContext } from "../Context/AuthContext.jsx";
 
 function LogIn() {
     const [validated, setValidated] = useState(false);
