@@ -2,7 +2,6 @@ import { Container, Navbar, Nav, Button, Dropdown, Badge } from "react-bootstrap
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from "../Context/CartProvider";
 import { AuthContext } from "../Context/AuthContext";
-import LogIn from "../Pages/LogIn";
 import { useContext } from "react";
 
 function Header () {
