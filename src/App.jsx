@@ -20,12 +20,12 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/login" element={<LogIn />} />
-        <Route path="/Cart" element={<Cart />}/>
+        <Route path="/cart" element={<Cart />}/>
         <Route path="/admin/add" element={<AddProduct />} />
         <Route path="/admin/edit/:id" element={<EditProduct />} />
         
         {/* PROTECTED ROUTES */}
-        <Route path="/Admin" element={
+        <Route path="/admin" element={
           <ProtectedRoute>
             <Admin />
           </ProtectedRoute>
